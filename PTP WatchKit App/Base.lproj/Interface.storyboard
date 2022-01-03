@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="PTP_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" id="had-uJ-yns">
+                            <items>
+                                <label width="0.33000000000000002" alignment="left" text="pre%" textAlignment="center" id="aai-hS-ieR"/>
+                                <label width="0.33000000000000002" alignment="left" text="sen%" textAlignment="center" id="gmO-au-aPQ"/>
+                                <label width="0.33000000000000002" alignment="left" text="spe%" textAlignment="center" id="uaH-cf-2m4"/>
+                            </items>
+                        </group>
+                        <group width="1" height="0.55000000000000004" alignment="left" id="OTk-GI-GiG">
+                            <items>
+                                <picker width="0.33000000000000002" height="1" alignment="left" focusStyle="stack" id="XvE-oM-zVP">
+                                    <connections>
+                                        <action selector="PretestPickerChanged:" destination="AgC-eL-Hgc" id="85p-h0-i7y"/>
+                                    </connections>
+                                </picker>
+                                <picker width="0.33000000000000002" height="1" alignment="left" focusStyle="stack" id="WDq-U5-L9c">
+                                    <connections>
+                                        <action selector="SensitivityPickerChanged:" destination="AgC-eL-Hgc" id="Dsm-HQ-hK2"/>
+                                    </connections>
+                                </picker>
+                                <picker width="0.33000000000000002" height="1" alignment="left" focusStyle="stack" id="bmN-58-8H2">
+                                    <connections>
+                                        <action selector="SpecificityPickerChanged:" destination="AgC-eL-Hgc" id="YCJ-JL-DI1"/>
+                                    </connections>
+                                </picker>
+                            </items>
+                        </group>
+                        <label width="1" alignment="left" text="positive" id="44Y-ds-j8D"/>
+                        <label width="1" alignment="left" text="negative" id="DRx-sX-Xtc"/>
+                    </items>
+                    <connections>
+                        <outlet property="NegativeResult" destination="DRx-sX-Xtc" id="hXx-J6-oYc"/>
+                        <outlet property="PositiveResult" destination="44Y-ds-j8D" id="A79-LC-M44"/>
+                        <outlet property="PretestPicker" destination="XvE-oM-zVP" id="UFx-vE-gJa"/>
+                        <outlet property="SensitivityPicker" destination="WDq-U5-L9c" id="ikK-4z-n5g"/>
+                        <outlet property="SpecificityPicker" destination="bmN-58-8H2" id="uoB-LJ-fWu"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="280" y="258"/>
+        </scene>
+    </scenes>
+</document>
